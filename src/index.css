@@ -24,3 +24,24 @@ li {
   color: #323232;
   cursor: pointer;
 }
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+}
+
+/* Add hover effect to the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
