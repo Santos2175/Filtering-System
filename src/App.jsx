@@ -23,13 +23,11 @@ function App() {
   //radio filtering
   const handleChange = (e) => {
     setSelectedCategory(e.target.value);
-    console.log(e.target.value);
   };
 
   // Button Filtering
   const handleClick = (e) => {
     setSelectedCategory(e.target.value);
-    console.log(e.target.value);
   };
 
   const filteredData = (products, selected) => {
@@ -43,11 +41,11 @@ function App() {
     //button || radio filtering
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category, company, newPrice, color }) =>
-          company === selected ||
+        ({ category, newPrice, color, company }) =>
           category === selected ||
           newPrice === selected ||
-          color === selected
+          color === selected ||
+          company === selected
       );
     }
 
