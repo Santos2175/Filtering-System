@@ -8,6 +8,17 @@ import products from './db/data.jsx';
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  // Input Filtering
+  const [query, setQuery] = useState('');
+
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const filteredItems = products.filter(
+    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  );
+
   // Button Filtering
   const handleClick = (e) => {
     setSelectedCategory(e.target.value);
@@ -17,6 +28,12 @@ function App() {
   const filteredData = (products, selected) => {
     let filteredProducts = products;
 
+    //Input filtering
+    if (query) {
+      filteredProducts = filteredItems;
+    }
+
+    //button || radio filtering
     if (selected) {
       filteredProducts = filteredProducts.filter(
         ({ company }) => company === selected
@@ -41,7 +58,7 @@ function App() {
   const result = filteredData(products, selectedCategory);
   return (
     <>
-      <Nav />
+      <Nav query={query} handleInputChange={handleInputChange} />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
     </>
