@@ -1,7 +1,11 @@
-import React from 'react';
-
-const Input = () => {
-  return <div></div>;
+const Input = ({ handleChange, value, title, name }) => {
+  return (
+    <label className='sidebar-label-container'>
+      <input onChange={handleChange} type='radio' name={name} value={value} />
+      <span className='checkmark'></span>
+      {title}
+    </label>
+  );
 };
 
 export default Input;
