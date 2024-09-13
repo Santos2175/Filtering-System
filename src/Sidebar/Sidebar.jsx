@@ -11,7 +11,7 @@ const Sidebar = ({ handleChange }) => {
           <h1>🛒</h1>
         </div>
         <Category handleChange={handleChange} />
-        <Price />
+        <Price handleChange={handleChange} />
         <Colors />
       </section>
     </>

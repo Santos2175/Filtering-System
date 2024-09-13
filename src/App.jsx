@@ -43,7 +43,8 @@ function App() {
     //button || radio filtering
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category, company }) => company === selected || category === selected
+        ({ category, company, newPrice }) =>
+          company === selected || category === selected || newPrice === selected
       );
     }
 
