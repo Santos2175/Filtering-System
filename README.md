@@ -42,6 +42,6 @@ npm run dev
 
 For any questions or feedback:
 - **Santosh Gurung** - [santoshgurung2175@gmail.com](mailto:santoshgurung2175@gmail.com)
-- **GitHub** - [https://github.com/Santos2175](https://github.com/Santo2175)
-- **LinkedIn** - [Your LinkedIn](https://linkedin.com/in/santosh-gurung2175)
+- **GitHub** - [https://github.com/Santos2175](https://github.com/Santos2175)
+- **LinkedIn** - [My LinkedIn](https://linkedin.com/in/santosh-gurung2175)
  
